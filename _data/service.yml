@@ -1,0 +1,33 @@
+# ═══════════════════════════════════════════════
+# Professional Service, Affiliations & Certifications
+# ═══════════════════════════════════════════════
+
+# Ad Hoc Reviewer
+reviewer_journals:
+  - "European Accounting Review (×2)"
+reviewer_conferences:
+  - "JAAF Conference (2026)"
+  - "AAA Annual Meeting (2026)"
+
+# Professional Affiliations
+affiliations:
+  - name: "American Accounting Association (AAA)"
+    period: "2026 –"
+  - name: "European Accounting Association (EAA)"
+    period: "2026 –"
+
+# Certifications
+certifications:
+  - name: "CFA (Level I)"
+    period: "2024"
+  - name: "Bloomberg ESG Certificate"
+    period: "2023"
+  - name: "Passed CICPA Economic Law"
+    period: "2021"
+  - name: "Securities Practitioner Qualification Certificate of China"
+    period: "2020"
+
+# Languages & Skills
+skills:
+  languages: "Mandarin (native), English (fluent)"
+  technical: "STATA, Python"

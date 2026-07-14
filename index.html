@@ -101,6 +101,12 @@ title: ""
     </div>
   {% endif %}
 
+  <!-- Conference Presentations -->
+  {% if site.data.conferences %}
+    <h2 class="section-title" style="margin-top: 2.5rem;">Conference Presentations &amp; Participation</h2>
+    {% include conference-list.html %}
+  {% endif %}
+
 </section>
 
 <!-- ═══════════════════════════════════════ -->
@@ -114,5 +120,25 @@ title: ""
       {% include experience-item.html item=item %}
     {% endfor %}
   </div>
+</section>
+{% endif %}
+
+<!-- ═══════════════════════════════════════ -->
+<!-- HONORS & AWARDS                        -->
+<!-- ═══════════════════════════════════════ -->
+{% if site.data.awards %}
+<section class="section" id="awards">
+  <h2 class="section-title">Honors &amp; Awards</h2>
+  {% include award-list.html %}
+</section>
+{% endif %}
+
+<!-- ═══════════════════════════════════════ -->
+<!-- PROFESSIONAL SERVICE                   -->
+<!-- ═══════════════════════════════════════ -->
+{% if site.data.service %}
+<section class="section" id="service">
+  <h2 class="section-title">Professional Service &amp; Affiliations</h2>
+  {% include service-block.html %}
 </section>
 {% endif %}

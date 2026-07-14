@@ -1,0 +1,22 @@
+{%- comment -%}
+  会议列表组件
+  使用: {% include conference-list.html %}
+  数据来源: _data/conferences.yml
+{%- endcomment -%}
+<div class="conference-list">
+  {% for group in site.data.conferences %}
+    <div class="conference-year">
+      <span class="conference-year-label">{{ group.year }}</span>
+      <div class="conference-items">
+        {% for item in group.items %}
+          <div class="conference-item">
+            <span class="conference-name">{{ item.name }}</span>
+            {% for role in item.roles %}
+              <span class="conference-role">{{ role }}</span>
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>

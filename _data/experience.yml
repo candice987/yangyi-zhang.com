@@ -1,38 +1,48 @@
 # ═══════════════════════════════════════════════
 # Professional Experience
-# 字段: role, org, location, period, desc (数组，每项一条职责)
 # ═══════════════════════════════════════════════
 
 - role: "Senior Associate"
   org: "Zhongtai Securities"
   dept: "Investment Banking Committee"
   location: "Shanghai, China"
-  period: "Jun 2022 – Jan 2024"
+  period: "2022 – 2024"
   desc:
-    - "Conducted comprehensive analysis of equity incentive programs in A-share listed companies (types, implementation stages, lock-up periods, and sizes), evaluating advantages and disadvantages of different methods and providing tailored recommendations and cost estimations."
-    - "Gathered and analyzed data on A-share market refinancing and IPO activities; prepared 30+ pitchbooks with comprehensive analysis and customized financing strategies."
-    - "Participated in refinancing, M&A, and IPO projects; led legal and financial due diligence, collaborating with clients to resolve issues and propose solutions."
+    - "Conducted comprehensive analysis of equity incentive programs in A-share listed companies, evaluating advantages and disadvantages of different methods and providing tailored recommendations and cost estimations."
+    - "Gathered and analyzed data on A-share market refinancing and IPO activities; prepared 30+ pitchbooks with customized financing strategies."
+    - "Participated in refinancing, M&A, and IPO projects; led legal and financial due diligence processes."
 
 - role: "Investment Research Intern"
   org: "Leap Capital"
   location: "Shanghai, China"
-  period: "Feb 2022 – May 2022"
+  period: "2022"
   desc:
     - "Conducted research on start-up companies, evaluating growth potential through analysis of cash flows, revenue, and pipelines, and calculating potential returns post-IPO or next financing round."
 
 - role: "Wealth Management Summer Intern"
   org: "Huatai Securities"
   location: "Shanghai, China"
-  period: "Jul 2021 – Aug 2021"
+  period: "2021"
   desc:
     - "Provided personalized asset allocation plans based on clients' risk preferences, liquidity needs, and investment styles."
-    - "Translated complex investment data into client-facing presentations, highlighting strategy alignment with individual goals and return potential versus CSI 300."
+
+- role: "Investment Banking Intern"
+  org: "CICC (China International Capital Corporation)"
+  location: "Shanghai, China"
+  period: "2021"
+  desc: []
+
+- role: "Investment Banking Intern"
+  org: "Guangfa Securities"
+  location: "Shanghai, China"
+  period: "2019 – 2020"
+  desc: []
 
 # ────────────── Research Experience ──────────────
 - role: "Research Assistant"
   org: "National Natural Science Foundation of China"
   dept: "The Impact of Accounting and Auditing on Business Management and Macroeconomy"
   location: ""
-  period: "Sep 2019 – Mar 2020"
+  period: "2019 – 2020"
   desc:
-    - "Assisted in research funded by NSFC examining the impact of accounting and auditing on business management and macroeconomic outcomes."
+    - "Assisted in NSFC-funded research examining the impact of accounting and auditing on business management and macroeconomic outcomes."

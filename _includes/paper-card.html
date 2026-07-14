@@ -18,6 +18,9 @@
   {% endif %}
 
   <div class="paper-meta">
+    {% if paper.status %}
+      <span class="badge badge-status">{{ paper.status }}</span>
+    {% endif %}
     {% if paper.venue %}
       <span class="badge {% if paper.type == 'working' %}badge-wp{% else %}badge-journal{% endif %}">
         {{ paper.venue }}{% if paper.year %}, {{ paper.year }}{% endif %}
@@ -36,6 +39,10 @@
       {% endfor %}
     {% endif %}
   </div>
+
+  {% if paper.award %}
+    <p class="paper-award">&#127942; {{ paper.award }}</p>
+  {% endif %}
 
   {% if paper.brief %}
     <p class="paper-brief">{{ paper.brief }}</p>

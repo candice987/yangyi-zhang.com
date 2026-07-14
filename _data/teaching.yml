@@ -1,8 +1,25 @@
 # ═══════════════════════════════════════════════
 # 教学经历
 # ═══════════════════════════════════════════════
-# 暂无教学经历 —— 获得后在此添加，格式如下：
-# - role: "Instructor"
-#   course: "Course Name"
-#   org: "Institution"
-#   period: "Semester Year"
+
+# 教学兴趣
+interests:
+  - "Financial Accounting"
+  - "Business Finance"
+  - "Management Accounting"
+  - "Open to other subjects"
+
+# TA 经历
+courses:
+  - role: "Teaching Assistant"
+    course: "Seminar in Financial Reporting and Capital Markets Research (MSc)"
+    org: "Prof. Colin Zeng"
+    period: "2025"
+  - role: "Teaching Assistant"
+    course: "Business Finance (UG)"
+    org: "Prof. Walid Saffar"
+    period: "2025"
+  - role: "Teaching Assistant"
+    course: "Management Accounting (UG)"
+    org: "Prof. Shuran Zhang"
+    period: "2024"

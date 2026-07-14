@@ -6,14 +6,22 @@ permalink: /teaching/
 ---
 
 <section class="section" style="border-top: none; padding-top: 1.5rem;">
-  <p style="margin-bottom: 2rem; color: #4a5568;">
-    Courses I have taught or assisted with as an instructor and teaching assistant.
-  </p>
 
-  {% if site.data.teaching and site.data.teaching.size > 0 %}
-    <h2 class="section-title">Courses</h2>
+  <!-- Teaching Interests -->
+  {% if site.data.teaching.interests %}
+    <h2 class="section-title">Teaching Interests</h2>
+    <div class="service-tags" style="margin-bottom: 2.5rem;">
+      {% for interest in site.data.teaching.interests %}
+        <span class="tag" style="font-size: 0.85rem; padding: 4px 12px;">{{ interest }}</span>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <!-- TA Experience -->
+  {% if site.data.teaching.courses and site.data.teaching.courses.size > 0 %}
+    <h2 class="section-title">Teaching Assistant Experience</h2>
     <div class="teaching-list">
-      {% for item in site.data.teaching %}
+      {% for item in site.data.teaching.courses %}
         <div class="teaching-item">
           <span class="teaching-role">{{ item.role }}</span>
           <div class="teaching-info">
@@ -25,7 +33,8 @@ permalink: /teaching/
     </div>
   {% else %}
     <div style="padding: 2rem; text-align: center; background: #f7f8fa; border: 1px dashed #e2e8f0; border-radius: 10px; color: #8895a7;">
-      <p style="margin: 0;">No teaching records yet. Teaching assignments will be added here once available.</p>
+      <p style="margin: 0;">No teaching records yet.</p>
     </div>
   {% endif %}
+
 </section>

@@ -1,0 +1,16 @@
+{%- comment -%}
+  获奖列表组件
+  使用: {% include award-list.html %}
+  数据来源: _data/awards.yml
+{%- endcomment -%}
+<div class="award-list">
+  {% for item in site.data.awards %}
+    <div class="award-item">
+      <span class="award-icon">&#127942;</span>
+      <div class="award-content">
+        <span class="award-title">{{ item.title }}</span>
+        <span class="award-meta">{{ item.org }}{% if item.period %} &middot; {{ item.period }}{% endif %}</span>
+      </div>
+    </div>
+  {% endfor %}
+</div>

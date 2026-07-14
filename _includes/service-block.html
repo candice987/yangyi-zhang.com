@@ -1,0 +1,73 @@
+{%- comment -%}
+  服务与资质组件
+  使用: {% include service-block.html %}
+  数据来源: _data/service.yml
+{%- endcomment -%}
+
+{%- comment -%} Ad Hoc Reviewer {%- endcomment -%}
+{% if site.data.service.reviewer_journals or site.data.service.reviewer_conferences %}
+<div class="service-block">
+  <h3 class="service-heading">Ad Hoc Reviewer</h3>
+  {% if site.data.service.reviewer_journals %}
+    <div class="service-subheading">Journals</div>
+    <div class="service-tags">
+      {% for item in site.data.service.reviewer_journals %}
+        <span class="tag">{{ item }}</span>
+      {% endfor %}
+    </div>
+  {% endif %}
+  {% if site.data.service.reviewer_conferences %}
+    <div class="service-subheading">Conferences</div>
+    <div class="service-tags">
+      {% for item in site.data.service.reviewer_conferences %}
+        <span class="tag">{{ item }}</span>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+{% endif %}
+
+{%- comment -%} Professional Affiliations {%- endcomment -%}
+{% if site.data.service.affiliations %}
+<div class="service-block">
+  <h3 class="service-heading">Professional Affiliations</h3>
+  <div class="service-grid">
+    {% for item in site.data.service.affiliations %}
+      <div class="service-entry">
+        <span class="service-name">{{ item.name }}</span>
+        <span class="service-period">{{ item.period }}</span>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{%- comment -%} Certifications {%- endcomment -%}
+{% if site.data.service.certifications %}
+<div class="service-block">
+  <h3 class="service-heading">Certifications</h3>
+  <div class="service-grid">
+    {% for item in site.data.service.certifications %}
+      <div class="service-entry">
+        <span class="service-name">{{ item.name }}</span>
+        <span class="service-period">{{ item.period }}</span>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{%- comment -%} Languages & Skills {%- endcomment -%}
+{% if site.data.service.skills %}
+<div class="service-block">
+  <h3 class="service-heading">Languages &amp; Skills</h3>
+  <div class="service-skills">
+    {% if site.data.service.skills.languages %}
+      <div><strong>Languages:</strong> {{ site.data.service.skills.languages }}</div>
+    {% endif %}
+    {% if site.data.service.skills.technical %}
+      <div><strong>Technical:</strong> {{ site.data.service.skills.technical }}</div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}

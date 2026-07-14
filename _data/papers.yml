@@ -4,8 +4,21 @@
 # ═══════════════════════════════════════════════
 
 # ────────────── Working Papers ──────────────
-- title: "United We Speak: Antidumping Investigations and Intra-industry Disclosure Coordination"
-  authors: "with O. Guedhami, Y. Wu, C. Zeng"
+- title: "United We Speak: Antidumping Investigations and Intra-industry Cost Coordination"
+  authors: "with Omrane Guedhami, Qiang Wu, Colin Zeng"
   type: working
-  year: 2025
-  brief: "This paper examines how antidumping investigations trigger intra-industry coordination in corporate disclosure behavior among affected firms."
+  year: 2026
+  status: "First-Year Summer Paper"
+  brief: "This paper examines how antidumping investigations trigger intra-industry coordination in corporate cost behavior among affected firms."
+  award: "PolyU AF Doctoral Consortium 2026 Best Paper Award"
+  presented:
+    - "EAA Annual Congress 2026"
+    - "AsianFA 2026"
+    - "AAA Annual Meeting 2026"
+
+- title: "Marching in Step: Fiscal Year-End Alignment and Corporate Tax Avoidance"
+  authors: "with Qiang Wu, Colin Zeng"
+  type: working
+  year: 2026
+  status: "Second-Year Summer Paper"
+  brief: "This paper investigates how fiscal year-end alignment among firms within an industry influences corporate tax avoidance behavior."

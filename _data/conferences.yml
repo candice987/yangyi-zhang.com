@@ -1,0 +1,22 @@
+# ═══════════════════════════════════════════════
+# Conference Presentations, Discussions & Participation
+# roles: Presentation / Discussion / Moderator / Attended
+# ═══════════════════════════════════════════════
+- year: "2026"
+  items:
+    - name: "AAA Annual Meeting"
+      roles: ["Presentation"]
+    - name: "AAA Doctoral Consortium"
+      roles: ["Presentation"]
+    - name: "CAPANA Doctoral Consortium"
+      roles: []
+    - name: "HKU Summer Accounting Conference"
+      roles: []
+    - name: "HKU Doctoral Consortium"
+      roles: []
+    - name: "AsianFA Annual Conference"
+      roles: ["Presentation", "Discussion"]
+    - name: "EAA Annual Congress"
+      roles: ["Presentation"]
+    - name: "PolyU AF Doctoral Consortium"
+      roles: []
