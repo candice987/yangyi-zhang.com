@@ -1,0 +1,524 @@
+// ═══════════════════════════════════════════════
+// Components — 各内容模块样式
+// ═══════════════════════════════════════════════
+
+// ────────────── Section 标题 ──────────────
+.section {
+  padding: $space-2xl 0;
+  border-top: 1px solid $color-border;
+
+  &:first-of-type {
+    border-top: none;
+  }
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: $font-weight-bold;
+  margin-bottom: $space-xl;
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 1.4em;
+    background: $color-primary;
+    border-radius: $radius-full;
+  }
+}
+
+// ────────────── Hero / About ──────────────
+.hero {
+  display: flex;
+  gap: $space-2xl;
+  align-items: flex-start;
+  padding: $space-2xl 0;
+
+  .hero-photo {
+    flex-shrink: 0;
+    width: 180px;
+
+    img {
+      width: 180px;
+      height: 180px;
+      border-radius: $radius-lg;
+      object-fit: cover;
+      border: 4px solid $color-bg-soft;
+      box-shadow: 0 4px 20px $color-shadow;
+    }
+  }
+
+  .hero-content {
+    flex: 1;
+    min-width: 0;
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: $space-xs;
+    }
+
+    .tagline {
+      font-size: 1.05rem;
+      color: $color-primary;
+      font-weight: $font-weight-medium;
+      margin-bottom: $space-md;
+    }
+
+    .bio {
+      font-size: 1rem;
+      color: $color-text-soft;
+      line-height: $line-height-base;
+      margin-bottom: $space-lg;
+
+      p + p {
+        margin-top: $space-sm;
+      }
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $space-sm;
+      align-items: center;
+    }
+  }
+}
+
+// ────────────── 按钮 ──────────────
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-xs;
+  padding: $space-sm $space-lg;
+  border-radius: $radius-full;
+  font-size: 0.9rem;
+  font-weight: $font-weight-medium;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+
+  &.btn-primary {
+    background: $color-primary;
+    color: #fff;
+
+    &:hover {
+      background: $color-primary-dark;
+      color: #fff;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba($color-primary, 0.3);
+    }
+  }
+
+  &.btn-outline {
+    background: transparent;
+    color: $color-text-soft;
+    border: 1.5px solid $color-border;
+
+    &:hover {
+      border-color: $color-primary;
+      color: $color-primary;
+      background: $color-bg-soft;
+    }
+  }
+}
+
+// ────────────── 社交图标 ──────────────
+.social-links {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-sm;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: $radius-full;
+    background: $color-bg-soft;
+    color: $color-text-soft;
+    border: 1px solid $color-border;
+    transition: all 0.2s ease;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    &:hover {
+      background: $color-primary;
+      color: #fff;
+      border-color: $color-primary;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// ────────────── 信息行（职位 / 教育）──────────────
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+}
+
+.info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: $space-md;
+
+  .info-logo {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: $radius-sm;
+    background: $color-bg-soft;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid $color-border;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 4px;
+    }
+
+    .logo-placeholder {
+      font-size: 1.2rem;
+      font-weight: $font-weight-bold;
+      color: $color-text-muted;
+    }
+  }
+
+  .info-text {
+    flex: 1;
+    padding-top: $space-xs;
+
+    .info-title {
+      font-weight: $font-weight-medium;
+      color: $color-text;
+    }
+
+    .info-org {
+      color: $color-text-muted;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// ────────────── 论文卡片 ──────────────
+.paper-list {
+  display: flex;
+  flex-direction: column;
+  gap: $space-lg;
+  counter-reset: paper;
+}
+
+.paper-item {
+  counter-increment: paper;
+  padding: $space-lg;
+  background: $color-bg-soft;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+
+  &:hover {
+    border-color: rgba($color-primary, 0.3);
+    box-shadow: 0 2px 12px $color-shadow;
+  }
+
+  .paper-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: $radius-full;
+    background: $color-primary;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: $font-weight-bold;
+    margin-right: $space-sm;
+    vertical-align: middle;
+
+    &::before {
+      content: counter(paper);
+    }
+  }
+
+  .paper-title {
+    display: inline;
+    font-size: 1.05rem;
+    font-weight: $font-weight-bold;
+    color: $color-text;
+    vertical-align: middle;
+  }
+
+  .paper-authors {
+    color: $color-text-muted;
+    font-size: 0.9rem;
+    margin: $space-xs 0 $space-sm;
+  }
+
+  .paper-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-sm;
+    align-items: center;
+    margin-bottom: $space-sm;
+  }
+
+  .paper-brief {
+    font-size: 0.92rem;
+    color: $color-text-soft;
+    margin-top: $space-sm;
+    padding-top: $space-sm;
+    border-top: 1px dashed $color-border;
+  }
+}
+
+// —— 徽章 ——
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: $font-weight-medium;
+  padding: 2px $space-sm;
+  border-radius: $radius-sm;
+  background: $color-bg-muted;
+  color: $color-text-soft;
+
+  &.badge-journal {
+    background: rgba($color-primary, 0.1);
+    color: $color-primary-dark;
+  }
+
+  &.badge-wp {
+    background: rgba($color-accent, 0.1);
+    color: $color-accent;
+  }
+}
+
+.paper-link {
+  font-size: 0.85rem;
+  font-weight: $font-weight-medium;
+
+  &::after {
+    content: "↗";
+    margin-left: 2px;
+    font-size: 0.8em;
+  }
+}
+
+// —— "Presented at" 标记 ——
+.paper-presented {
+  font-size: 0.82rem;
+  color: $color-text-muted;
+  margin-top: $space-xs;
+  font-style: italic;
+}
+
+// ────────────── 教学卡片 ──────────────
+.teaching-list {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+}
+
+.teaching-item {
+  display: flex;
+  align-items: flex-start;
+  gap: $space-md;
+  padding: $space-md;
+  border-radius: $radius-md;
+  background: $color-bg-soft;
+  border: 1px solid $color-border;
+
+  .teaching-role {
+    flex-shrink: 0;
+    font-size: 0.8rem;
+    font-weight: $font-weight-medium;
+    color: $color-accent;
+    background: rgba($color-accent, 0.1);
+    padding: 2px $space-sm;
+    border-radius: $radius-sm;
+    margin-top: 2px;
+  }
+
+  .teaching-info {
+    flex: 1;
+
+    .teaching-course {
+      font-weight: $font-weight-medium;
+      color: $color-text;
+    }
+
+    .teaching-org {
+      font-size: 0.88rem;
+      color: $color-text-muted;
+    }
+  }
+}
+
+// ────────────── 工作经历卡片 ──────────────
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: $space-lg;
+}
+
+.experience-item {
+  padding: $space-lg;
+  background: $color-bg-soft;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  border-left: 3px solid $color-primary;
+
+  .experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: $space-xs;
+    margin-bottom: $space-sm;
+  }
+
+  .experience-title-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: $space-sm;
+  }
+
+  .experience-role {
+    font-weight: $font-weight-bold;
+    color: $color-text;
+    font-size: 1.02rem;
+  }
+
+  .experience-org {
+    color: $color-text-soft;
+    font-size: 0.92rem;
+  }
+
+  .experience-meta {
+    font-size: 0.85rem;
+    color: $color-text-muted;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .experience-desc {
+    margin: $space-sm 0 0;
+    padding-left: $space-lg;
+    list-style: disc;
+
+    li {
+      font-size: 0.9rem;
+      color: $color-text-soft;
+      line-height: 1.6;
+      margin-bottom: $space-xs;
+    }
+  }
+}
+
+// ────────────── 项目卡片 ──────────────
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: $space-lg;
+}
+
+.project-card {
+  padding: $space-lg;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  background: $color-bg;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    border-color: rgba($color-primary, 0.4);
+    box-shadow: 0 6px 20px $color-shadow;
+    transform: translateY(-2px);
+  }
+
+  .project-emoji {
+    font-size: 1.8rem;
+    margin-bottom: $space-sm;
+  }
+
+  .project-title {
+    font-size: 1.05rem;
+    font-weight: $font-weight-bold;
+    margin-bottom: $space-xs;
+  }
+
+  .project-desc {
+    font-size: 0.9rem;
+    color: $color-text-soft;
+    flex: 1;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-xs;
+    margin-top: $space-md;
+  }
+}
+
+.tag {
+  font-size: 0.75rem;
+  font-weight: $font-weight-medium;
+  padding: 2px $space-sm;
+  border-radius: $radius-full;
+  background: $color-bg-muted;
+  color: $color-text-muted;
+}
+
+// ────────────── 响应式 ──────────────
+@media (max-width: $breakpoint-md) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: $space-xl;
+
+    .hero-photo img {
+      width: 140px;
+      height: 140px;
+    }
+
+    .hero-content {
+      .hero-links {
+        justify-content: center;
+      }
+    }
+  }
+
+  .info-row {
+    .info-logo {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  .experience-item {
+    .experience-header {
+      flex-direction: column;
+    }
+
+    .experience-desc {
+      padding-left: $space-md;
+    }
+  }
+}

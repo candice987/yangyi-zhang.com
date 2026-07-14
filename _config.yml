@@ -1,0 +1,61 @@
+# ──────────────────────────────────────────────
+# Site settings
+# ──────────────────────────────────────────────
+title: Yangyi (Candice) Zhang
+email: yangyi-candice.zhang@connect.polyu.hk
+description: >-
+  PhD Candidate in Finance at The Hong Kong Polytechnic University.
+  Research on geopolitical factors and corporate disclosure.
+baseurl: "/yangyi-zhang.com"  # 项目仓库部署到子路径
+url: "https://candice987.github.io"  # 购买域名后改为 https://yangyi-zhang.com 并清空 baseurl
+
+# 自定义域名说明：在仓库根目录创建 CNAME 文件（本仓库已含），
+# 内容写一行：yangyi-zhang.com
+# 然后在域名 DNS 中将 yangyi-zhang.com 的 A 记录指向 GitHub Pages IP。
+
+# ──────────────────────────────────────────────
+# 导航栏
+# ──────────────────────────────────────────────
+nav:
+  - { label: "Research", href: "/#research" }
+  - { label: "Experience", href: "/#experience" }
+  - { label: "Teaching", href: "/teaching" }
+  - { label: "Projects", href: "/projects" }
+
+# ──────────────────────────────────────────────
+# 社交链接
+# ──────────────────────────────────────────────
+social:
+  google_scholar: ""
+  github: "https://github.com/"
+  linkedin: ""
+  orcid: "https://orcid.org/0009-0001-9691-1225"
+  twitter: ""
+
+# ──────────────────────────────────────────────
+# Build settings
+# ──────────────────────────────────────────────
+# 不使用 gem theme —— 全部样式和布局均自定义，避免命名冲突
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+sass:
+  style: compressed
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# 分页 / 博客
+permalink: /blog/:year/:month/:day/:title/
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - .gitignore

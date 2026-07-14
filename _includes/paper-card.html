@@ -1,0 +1,47 @@
+{%- comment -%}
+  论文卡片组件
+  使用: {% include paper-card.html paper=paper %}
+  数据来源: _data/papers.yml
+
+  paper 对象字段:
+    title, authors, venue, year, type (published/working/other),
+    links: [{label, href}], cited, brief, presented (数组)
+{%- endcomment -%}
+<article class="paper-item">
+  <div>
+    <span class="paper-number"></span>
+    <span class="paper-title">{{ paper.title }}</span>
+  </div>
+
+  {% if paper.authors %}
+    <div class="paper-authors">{{ paper.authors }}</div>
+  {% endif %}
+
+  <div class="paper-meta">
+    {% if paper.venue %}
+      <span class="badge {% if paper.type == 'working' %}badge-wp{% else %}badge-journal{% endif %}">
+        {{ paper.venue }}{% if paper.year %}, {{ paper.year }}{% endif %}
+      </span>
+    {% elsif paper.type == 'working' %}
+      <span class="badge badge-wp">Working Paper{% if paper.year %}, {{ paper.year }}{% endif %}</span>
+    {% endif %}
+
+    {% if paper.cited %}
+      <span class="badge">Cited by {{ paper.cited }}</span>
+    {% endif %}
+
+    {% if paper.links %}
+      {% for link in paper.links %}
+        <a href="{{ link.href }}" class="paper-link" {% if link.href contains 'http' %}target="_blank" rel="noopener"{% endif %}>{{ link.label }}</a>
+      {% endfor %}
+    {% endif %}
+  </div>
+
+  {% if paper.brief %}
+    <p class="paper-brief">{{ paper.brief }}</p>
+  {% endif %}
+
+  {% if paper.presented %}
+    <p class="paper-presented">Presented at: {{ paper.presented | join: ", " }}</p>
+  {% endif %}
+</article>

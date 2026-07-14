@@ -1,0 +1,31 @@
+---
+layout: page
+title: "Teaching"
+page_title: "Teaching"
+permalink: /teaching/
+---
+
+<section class="section" style="border-top: none; padding-top: 1.5rem;">
+  <p style="margin-bottom: 2rem; color: #4a5568;">
+    Courses I have taught or assisted with as an instructor and teaching assistant.
+  </p>
+
+  {% if site.data.teaching and site.data.teaching.size > 0 %}
+    <h2 class="section-title">Courses</h2>
+    <div class="teaching-list">
+      {% for item in site.data.teaching %}
+        <div class="teaching-item">
+          <span class="teaching-role">{{ item.role }}</span>
+          <div class="teaching-info">
+            <div class="teaching-course">{{ item.course }}</div>
+            <div class="teaching-org">{{ item.org }} &middot; {{ item.period }}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div style="padding: 2rem; text-align: center; background: #f7f8fa; border: 1px dashed #e2e8f0; border-radius: 10px; color: #8895a7;">
+      <p style="margin: 0;">No teaching records yet. Teaching assignments will be added here once available.</p>
+    </div>
+  {% endif %}
+</section>

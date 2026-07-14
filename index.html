@@ -1,0 +1,118 @@
+---
+layout: default
+title: ""
+---
+
+<!-- ═══════════════════════════════════════ -->
+<!-- HERO / ABOUT ME                        -->
+<!-- ═══════════════════════════════════════ -->
+<section class="hero" id="about">
+  <div class="hero-photo">
+    <img src="{{ site.data.profile.photo | relative_url }}" alt="{{ site.data.profile.name }}" onerror="this.onerror=null;this.src='{{ "/assets/img/profile-placeholder.svg" | relative_url }}'">
+  </div>
+  <div class="hero-content">
+    <h1>{{ site.data.profile.name }}</h1>
+    {% if site.data.profile.name_cn != "" %}
+      <p style="font-size: 1.1rem; color: #8895a7; margin-bottom: 0.25rem;">{{ site.data.profile.name_cn }}</p>
+    {% endif %}
+    <p class="tagline">{{ site.data.profile.tagline }}</p>
+
+    <div class="bio">
+      {% for paragraph in site.data.profile.bio %}
+        <p>{{ paragraph }}</p>
+      {% endfor %}
+    </div>
+
+    <div class="hero-links">
+      {% if site.data.profile.cv and site.data.profile.cv != "" %}
+        <a href="{{ site.data.profile.cv | relative_url }}" class="btn btn-primary" target="_blank">📄 Curriculum Vitae</a>
+      {% endif %}
+      {% if site.data.profile.contact.email %}
+        <a href="mailto:{{ site.data.profile.contact.email }}" class="btn btn-outline">✉️ {{ site.data.profile.contact.email }}</a>
+      {% endif %}
+      {% include social-links.html %}
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- CURRENT POSITION                       -->
+<!-- ═══════════════════════════════════════ -->
+{% if site.data.positions %}
+<section class="section" id="position">
+  <h2 class="section-title">Current Position</h2>
+  <div class="info-list">
+    {% for item in site.data.positions %}
+      {% include info-row.html item=item %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<!-- ═══════════════════════════════════════ -->
+<!-- EDUCATION                              -->
+<!-- ═══════════════════════════════════════ -->
+{% if site.data.education %}
+<section class="section" id="education">
+  <h2 class="section-title">Education</h2>
+  <div class="info-list">
+    {% for item in site.data.education %}
+      {% include info-row.html item=item %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<!-- ═══════════════════════════════════════ -->
+<!-- RESEARCH                               -->
+<!-- ═══════════════════════════════════════ -->
+<section class="section" id="research">
+
+  <!-- Working Papers -->
+  {% assign working = site.data.papers | where: "type", "working" %}
+  {% if working.size > 0 %}
+    <h2 class="section-title">Working Papers</h2>
+    <div class="paper-list">
+      {% for paper in working %}
+        {% include paper-card.html paper=paper %}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <!-- Publications -->
+  {% assign published = site.data.papers | where: "type", "published" %}
+  {% if published.size > 0 %}
+    <h2 class="section-title" style="margin-top: 2.5rem;">Publications</h2>
+    <div class="paper-list">
+      {% for paper in published %}
+        {% include paper-card.html paper=paper %}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <!-- Other Works -->
+  {% assign others = site.data.papers | where: "type", "other" %}
+  {% if others.size > 0 %}
+    <h2 class="section-title" style="margin-top: 2.5rem;">Other Works</h2>
+    <div class="paper-list">
+      {% for paper in others %}
+        {% include paper-card.html paper=paper %}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- PROFESSIONAL EXPERIENCE                -->
+<!-- ═══════════════════════════════════════ -->
+{% if site.data.experience %}
+<section class="section" id="experience">
+  <h2 class="section-title">Experience</h2>
+  <div class="experience-list">
+    {% for item in site.data.experience %}
+      {% include experience-item.html item=item %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

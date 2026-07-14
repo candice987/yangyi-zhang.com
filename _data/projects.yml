@@ -1,0 +1,25 @@
+# ═══════════════════════════════════════════════
+# 项目展示
+# emoji:  项目图标 emoji
+# title:  项目名
+# desc:   简短描述
+# link:   项目链接（GitHub / Demo，可选）
+# tags:   技术标签数组
+# ═══════════════════════════════════════════════
+- emoji: "📊"
+  title: "Research Data Pipeline"
+  desc: "Automated pipeline for collecting, cleaning, and analyzing financial datasets."
+  link: "https://github.com/"
+  tags: ["Python", "Pandas", "API"]
+
+- emoji: "🌐"
+  title: "Personal Website"
+  desc: "This website — built with Jekyll and custom SCSS, deployed on GitHub Pages."
+  link: ""
+  tags: ["Jekyll", "SCSS", "GitHub Pages"]
+
+- emoji: "📈"
+  title: "Trading Simulator"
+  desc: "Interactive backtesting tool for quantitative trading strategies."
+  link: ""
+  tags: ["R", "Shiny", "Finance"]

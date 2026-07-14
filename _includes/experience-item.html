@@ -1,0 +1,25 @@
+{%- comment -%}
+  Professional Experience 组件
+  使用: {% include experience-item.html item=item %}
+
+  item 字段:
+    role, org, dept (可选), location, period, desc (数组)
+{%- endcomment -%}
+<div class="experience-item">
+  <div class="experience-header">
+    <div class="experience-title-row">
+      <span class="experience-role">{{ item.role }}</span>
+      <span class="experience-org">{{ item.org }}{% if item.dept %} · {{ item.dept }}{% endif %}</span>
+    </div>
+    <span class="experience-meta">
+      {% if item.location %}{{ item.location }} · {% endif %}{{ item.period }}
+    </span>
+  </div>
+  {% if item.desc %}
+    <ul class="experience-desc">
+      {% for point in item.desc %}
+        <li>{{ point }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>

@@ -1,0 +1,11 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+    <p>
+      {% if site.social.github %}
+        <a href="{{ site.social.github }}" target="_blank" rel="noopener">GitHub</a> &middot;
+      {% endif %}
+      <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    </p>
+  </div>
+</footer>

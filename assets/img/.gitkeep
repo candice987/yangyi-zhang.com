@@ -1,0 +1,10 @@
+# assets/img
+
+放置图片资源：
+
+| 文件 | 用途 |
+|------|------|
+| `profile.jpg` | 你的头像照片（推荐 400×400 或更大） |
+| `favicon.svg` | 网站标签页图标（已生成） |
+| `profile-placeholder.svg` | 头像加载失败时的占位图（已生成） |
+| 学校 logo（如 `xxx.svg`） | 在 `_data/positions.yml` 和 `_data/education.yml` 中引用 |

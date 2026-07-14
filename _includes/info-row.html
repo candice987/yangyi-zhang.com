@@ -1,0 +1,21 @@
+{%- comment -%}
+  信息行组件（职位 / 教育经历）
+  使用: {% include info-row.html item=item %}
+
+  item 字段:
+    title, org, logo (图片路径，可选)
+{%- endcomment -%}
+<div class="info-row">
+  <div class="info-logo">
+    {% if item.logo and item.logo != "" %}
+      <img src="{{ item.logo | relative_url }}" alt="{{ item.org | default: '' }}">
+    {% else %}
+      <span class="logo-placeholder">{{ item.org | default: 'U' | truncate: 1, '' }}</span>
+    {% endif %}
+  </div>
+  <div class="info-text">
+    <div class="info-title">{{ item.title }}</div>
+    {% if item.org %}<div class="info-org">{{ item.org }}</div>{% endif %}
+    {% if item.period %}<div class="info-org">{{ item.period }}</div>{% endif %}
+  </div>
+</div>

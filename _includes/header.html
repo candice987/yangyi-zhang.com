@@ -1,0 +1,13 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a href="{{ '/' | relative_url }}" class="brand">
+      <img src="{{ '/assets/img/profile.jpg' | relative_url }}" alt="{{ site.title }}" class="brand-avatar" onerror="this.style.display='none'">
+      {{ site.title }}
+    </a>
+    <nav class="nav">
+      {% for item in site.nav %}
+        <a href="{{ item.href | relative_url }}">{{ item.label }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>

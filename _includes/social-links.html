@@ -1,0 +1,41 @@
+{%- comment -%}
+  社交图标链接组件
+  使用: {% include social-links.html %}
+{%- endcomment -%}
+<div class="social-links">
+  {% if site.social.google_scholar and site.social.google_scholar != "" %}
+    <a href="{{ site.social.google_scholar }}" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar">
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.8 3.5L12 7.7l7.2 5.3L24 9.5 12 0z"/>
+      </svg>
+    </a>
+  {% endif %}
+  {% if site.social.github and site.social.github != "" %}
+    <a href="{{ site.social.github }}" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57v-2c-3.33.72-4.03-1.6-4.03-1.6-.55-1.4-1.34-1.76-1.34-1.76-1.08-.75.08-.73.08-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.81 5.63-5.49 5.92.42.36.81 1.1.81 2.22v3.29c0 .31.21.69.83.57A12 12 0 0 0 12 .3"/>
+      </svg>
+    </a>
+  {% endif %}
+  {% if site.social.linkedin and site.social.linkedin != "" %}
+    <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/>
+      </svg>
+    </a>
+  {% endif %}
+  {% if site.social.orcid and site.social.orcid != "" %}
+    <a href="{{ site.social.orcid }}" target="_blank" rel="noopener" title="ORCID" aria-label="ORCID">
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zM7.7 4.42a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4zM6.5 8.1h2.4v9.4H6.5V8.1zm4.9 0h2.4v1.27h.03c.33-.6 1.13-1.24 2.33-1.24 2.5 0 2.96 1.64 2.96 3.78v5.59h-2.4v-4.96c0-1.18-.02-2.7-1.65-2.7-1.65 0-1.9 1.29-1.9 2.62v5.04H11.4V8.1z"/>
+      </svg>
+    </a>
+  {% endif %}
+  {% if site.social.twitter and site.social.twitter != "" %}
+    <a href="{{ site.social.twitter }}" target="_blank" rel="noopener" title="Twitter / X" aria-label="Twitter">
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.21-6.82-5.97 6.82H1.68l7.73-8.84L1.25 2.25h6.82l4.71 6.23 5.46-6.23zm-1.16 17.52h1.83L7.01 4.13H5.05l12.03 15.64z"/>
+      </svg>
+    </a>
+  {% endif %}
+</div>

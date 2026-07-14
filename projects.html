@@ -1,0 +1,30 @@
+---
+layout: page
+title: "Projects"
+page_title: "Projects"
+permalink: /projects/
+---
+
+<section class="section" style="border-top: none; padding-top: 1.5rem;">
+  <p style="margin-bottom: 2rem; color: #4a5568;">
+    A selection of side projects, tools, and open-source contributions.
+  </p>
+
+  <div class="project-grid">
+    {% for project in site.data.projects %}
+      <a {% if project.link and project.link != "" %}href="{{ project.link }}" target="_blank" rel="noopener"{% endif %}
+         class="project-card" {% unless project.link and project.link != "" %}style="cursor: default;"{% endunless %}>
+        <div class="project-emoji">{{ project.emoji }}</div>
+        <div class="project-title">{{ project.title }}</div>
+        <div class="project-desc">{{ project.desc }}</div>
+        {% if project.tags %}
+          <div class="project-tags">
+            {% for tag in project.tags %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </a>
+    {% endfor %}
+  </div>
+</section>

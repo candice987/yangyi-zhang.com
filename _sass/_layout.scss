@@ -1,0 +1,134 @@
+// ═══════════════════════════════════════════════
+// Layout — header / main / footer / 响应式
+// ═══════════════════════════════════════════════
+
+// ────────────── Header ──────────────
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid $color-border;
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    max-width: $content-max-width;
+    margin: 0 auto;
+    padding: 0 $space-lg;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: $space-sm;
+    font-weight: $font-weight-bold;
+    font-size: 1.05rem;
+    color: $color-text;
+
+    .brand-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: $radius-full;
+      object-fit: cover;
+      border: 2px solid $color-border;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: $space-lg;
+
+    a {
+      font-size: 0.9rem;
+      font-weight: $font-weight-medium;
+      color: $color-text-soft;
+      position: relative;
+      padding: $space-sm 0;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: $color-primary;
+        transition: width 0.2s ease;
+      }
+
+      &:hover {
+        color: $color-primary;
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// ────────────── Main ──────────────
+.site-main {
+  min-height: calc(100vh - 60px - 56px); // 减去 header + footer
+}
+
+// ────────────── Footer ──────────────
+.site-footer {
+  border-top: 1px solid $color-border;
+  background: $color-bg-soft;
+
+  .footer-inner {
+    max-width: $content-max-width;
+    margin: 0 auto;
+    padding: $space-lg;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: $space-md;
+
+    p {
+      font-size: 0.85rem;
+      color: $color-text-muted;
+    }
+  }
+}
+
+// ────────────── 响应式 ──────────────
+@media (max-width: $breakpoint-md) {
+  .site-header {
+    .nav {
+      gap: $space-md;
+
+      a {
+        font-size: 0.85rem;
+      }
+    }
+  }
+
+  .container {
+    padding: 0 $space-md;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .site-header {
+    .brand {
+      font-size: 0.95rem;
+    }
+
+    .nav {
+      gap: $space-sm;
+    }
+  }
+}

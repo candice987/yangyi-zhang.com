@@ -1,0 +1,19 @@
+# ═══════════════════════════════════════════════
+# 个人主页信息 —— 首页 Hero 区块
+# ═══════════════════════════════════════════════
+
+name: Yangyi (Candice) Zhang
+name_cn: ""
+tagline: "Geopolitical Risks & Corporate Disclosure"
+
+photo: /assets/img/profile.jpg
+cv: /assets/Yangyi_Zhang_CV.pdf
+
+bio:
+  - "I am a Ph.D. Candidate in Finance at the School of Accounting and Finance, The Hong Kong Polytechnic University, supervised by Prof. Cheng (Colin) Zeng."
+  - "My research examines the intersection of geopolitical factors and corporate disclosure behavior, exploring the real effects of geopolitical risks and uncertainty on financial reporting and transparency."
+  - "Prior to my doctoral studies, I worked in investment banking at Zhongtai Securities. I hold a Master of Finance from Fudan University and a Bachelor of Management from Sun Yat-sen University."
+
+contact:
+  email: yangyi-candice.zhang@connect.polyu.hk
+  location: "Hong Kong, China"

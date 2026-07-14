@@ -1,0 +1,9 @@
+# assets/papers
+
+放置论文 PDF 文件。
+
+在 `_data/papers.yml` 中通过 `links` 字段引用，例如：
+```yaml
+links:
+  - { label: "PDF", href: "/assets/papers/paper1.pdf" }
+```
