@@ -17,11 +17,8 @@ title: ""
     {% endif %}
     <p class="tagline">{{ site.data.profile.tagline }}</p>
 
-    <div class="bio">
-      {% for paragraph in site.data.profile.bio %}
-        <p>{{ paragraph }}</p>
-      {% endfor %}
-    </div>
+    <h2 class="hero-about-heading">About Me</h2>
+    <p class="bio">{{ site.data.profile.bio }}</p>
 
     <div class="hero-links">
       {% if site.data.profile.cv and site.data.profile.cv != "" %}

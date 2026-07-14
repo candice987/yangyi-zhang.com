@@ -64,7 +64,16 @@
       font-size: 1.05rem;
       color: $color-primary;
       font-weight: $font-weight-medium;
-      margin-bottom: $space-md;
+      margin-bottom: $space-lg;
+    }
+
+    .hero-about-heading {
+      font-size: 1.15rem;
+      font-weight: $font-weight-bold;
+      color: $color-text;
+      margin: 0 0 $space-xs;
+      padding-bottom: $space-xs;
+      border-bottom: 2px solid $color-border;
     }
 
     .bio {
@@ -72,10 +81,6 @@
       color: $color-text-soft;
       line-height: $line-height-base;
       margin-bottom: $space-lg;
-
-      p + p {
-        margin-top: $space-sm;
-      }
     }
 
     .hero-links {
