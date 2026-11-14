@@ -8,8 +8,9 @@
 <div class="info-row">
   <div class="info-logo">
     {% if item.logo and item.logo != "" %}
-      <img src="{{ item.logo | relative_url }}" alt="{{ item.org | default: '' }}">
-    {% else %}
+      <img src="{{ item.logo | relative_url }}" alt="{{ item.org | split: ',' | first }} logo" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+    {% endif %}
+    <span class="logo-fallback"{% if item.logo and item.logo != "" %} hidden{% endif %}>
       {% if include.icon == 'position' %}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <rect x="3" y="7" width="18" height="13" rx="2"></rect>
@@ -21,7 +22,7 @@
           <path d="M6 11v5c0 1.7 2.7 3 6 3s6-.3 6-3v-5M22 9v7"></path>
         </svg>
       {% endif %}
-    {% endif %}
+    </span>
   </div>
   <div class="info-text">
     <div class="info-title">{{ item.title }}</div>

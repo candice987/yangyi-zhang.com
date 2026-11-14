@@ -149,6 +149,16 @@
     border: 1px solid $color-border;
     transition: all 0.2s ease;
 
+    .logo-fallback {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-fallback[hidden] {
+      display: none;
+    }
+
     svg {
       width: 18px;
       height: 18px;
