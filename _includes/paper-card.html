@@ -5,7 +5,7 @@
 
   paper 对象字段:
     title, authors, venue, year, type (published/working/other),
-    links: [{label, href}], cited, brief, presented (数组)
+    links: [{label, href}], cited, abstract, brief, presented (数组)
 {%- endcomment -%}
 <article class="paper-item">
   <div>
@@ -46,6 +46,10 @@
 
   {% if paper.brief %}
     <p class="paper-brief">{{ paper.brief }}</p>
+  {% endif %}
+
+  {% if paper.abstract %}
+    <p class="paper-brief"><strong>Abstract:</strong> {{ paper.abstract }}</p>
   {% endif %}
 
   {% if paper.presented %}

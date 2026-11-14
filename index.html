@@ -40,7 +40,7 @@ title: ""
   <h2 class="section-title">Current Position</h2>
   <div class="info-list">
     {% for item in site.data.positions %}
-      {% include info-row.html item=item %}
+      {% include info-row.html item=item icon="position" %}
     {% endfor %}
   </div>
 </section>
@@ -54,7 +54,7 @@ title: ""
   <h2 class="section-title">Education</h2>
   <div class="info-list">
     {% for item in site.data.education %}
-      {% include info-row.html item=item %}
+      {% include info-row.html item=item icon="education" %}
     {% endfor %}
   </div>
 </section>

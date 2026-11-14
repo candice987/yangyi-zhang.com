@@ -1,6 +1,6 @@
 {%- comment -%}
   信息行组件（职位 / 教育经历）
-  使用: {% include info-row.html item=item %}
+  使用: {% include info-row.html item=item icon="education" %}
 
   item 字段:
     title, org, logo (图片路径，可选)
@@ -10,7 +10,17 @@
     {% if item.logo and item.logo != "" %}
       <img src="{{ item.logo | relative_url }}" alt="{{ item.org | default: '' }}">
     {% else %}
-      <span class="logo-placeholder">{{ item.org | default: 'U' | truncate: 1, '' }}</span>
+      {% if include.icon == 'position' %}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="7" width="18" height="13" rx="2"></rect>
+          <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18M10 12v2h4v-2"></path>
+        </svg>
+      {% else %}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m2 9 10-5 10 5-10 5L2 9Z"></path>
+          <path d="M6 11v5c0 1.7 2.7 3 6 3s6-.3 6-3v-5M22 9v7"></path>
+        </svg>
+      {% endif %}
     {% endif %}
   </div>
   <div class="info-text">

@@ -194,10 +194,10 @@
       padding: 4px;
     }
 
-    .logo-placeholder {
-      font-size: 1.2rem;
-      font-weight: $font-weight-bold;
-      color: $color-text-muted;
+    svg {
+      width: 24px;
+      height: 24px;
+      color: $color-primary;
     }
   }
 
@@ -705,6 +705,11 @@
     .info-logo {
       width: 36px;
       height: 36px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 
