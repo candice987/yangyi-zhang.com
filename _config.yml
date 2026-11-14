@@ -18,7 +18,7 @@ url: "https://candice987.github.io"  # 购买域名后改为 https://yangyi-zhan
 # ──────────────────────────────────────────────
 nav:
   - { label: "Research", href: "/#research" }
-  - { label: "Experience", href: "/#experience" }
+  - { label: "Non-Academic Experience", href: "/#experience" }
   - { label: "Teaching", href: "/teaching" }
   - { label: "Projects", href: "/projects" }
 

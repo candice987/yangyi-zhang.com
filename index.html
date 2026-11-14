@@ -107,11 +107,30 @@ title: ""
 </section>
 
 <!-- ═══════════════════════════════════════ -->
-<!-- PROFESSIONAL EXPERIENCE                -->
+<!-- TEACHING EXPERIENCE                    -->
+<!-- ═══════════════════════════════════════ -->
+{% if site.data.teaching.experience and site.data.teaching.experience.size > 0 %}
+<section class="section" id="teaching">
+  <h2 class="section-title">Teaching Experience</h2>
+  <div class="teaching-list">
+    {% for item in site.data.teaching.experience %}
+      <div class="teaching-item">
+        <div class="teaching-info">
+          <div class="teaching-course">{{ item.course }}</div>
+          <div class="teaching-org">{{ item.period }}</div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<!-- ═══════════════════════════════════════ -->
+<!-- NON-ACADEMIC EXPERIENCE                -->
 <!-- ═══════════════════════════════════════ -->
 {% if site.data.experience %}
 <section class="section" id="experience">
-  <h2 class="section-title">Experience</h2>
+  <h2 class="section-title">Non-Academic Experience</h2>
   <div class="experience-list">
     {% for item in site.data.experience %}
       {% include experience-item.html item=item %}

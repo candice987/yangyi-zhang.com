@@ -9,6 +9,11 @@ interests:
   - "Management Accounting"
   - "Open to other subjects"
 
+# 教学经历
+experience:
+  - course: "AF3303 Business Finance"
+    period: "Spring 2026"
+
 # TA 经历
 courses:
   - role: "Teaching Assistant"

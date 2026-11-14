@@ -6,6 +6,8 @@
   items:
     - name: "AAA Annual Meeting"
       roles: ["Presentation"]
+    - name: "JAAF"
+      roles: ["Presentation"]
     - name: "AAA Doctoral Consortium"
       roles: ["Presentation"]
     - name: "CAPANA Doctoral Consortium"

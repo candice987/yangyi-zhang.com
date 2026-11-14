@@ -17,6 +17,21 @@ permalink: /teaching/
     </div>
   {% endif %}
 
+  <!-- Teaching Experience -->
+  {% if site.data.teaching.experience and site.data.teaching.experience.size > 0 %}
+    <h2 class="section-title">Teaching Experience</h2>
+    <div class="teaching-list" style="margin-bottom: 2.5rem;">
+      {% for item in site.data.teaching.experience %}
+        <div class="teaching-item">
+          <div class="teaching-info">
+            <div class="teaching-course">{{ item.course }}</div>
+            <div class="teaching-org">{{ item.period }}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
   <!-- TA Experience -->
   {% if site.data.teaching.courses and site.data.teaching.courses.size > 0 %}
     <h2 class="section-title">Teaching Assistant Experience</h2>
