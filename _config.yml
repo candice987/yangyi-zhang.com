@@ -2,10 +2,11 @@
 # Site settings
 # ──────────────────────────────────────────────
 title: Yangyi (Candice) Zhang
+tagline: Ph.D. Candidate in Accounting
 email: yangyi-candice.zhang@connect.polyu.hk
 description: >-
-  PhD Candidate in Finance at The Hong Kong Polytechnic University.
-  Research on geopolitical factors and corporate disclosure.
+  Ph.D. Candidate in Accounting at The Hong Kong Polytechnic University.
+  Research on regulatory interventions, strategic behavior, and corporate disclosure.
 baseurl: "/yangyi-zhang.com"  # 项目仓库部署到子路径
 url: "https://candice987.github.io"  # 购买域名后改为 https://yangyi-zhang.com 并清空 baseurl
 
